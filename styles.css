@@ -1,0 +1,620 @@
+*{
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-color: rgba(17,18,47,1);
+}
+ 
+.content1{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 800px;
+  background: rgb(30,46,56);
+  background: linear-gradient(90deg, rgba(30,46,56,1) 0%, rgba(17,18,47,1) 60%);
+}
+#content2{
+  height: auto;
+  background-color: rgba(17,18,47,1);
+}
+.content3{
+  height: 500px;
+
+}
+.content4{
+  height: 500px;
+
+}
+.content5{
+  height: 500px;
+
+}
+
+#logo{
+  height: 70px;
+}
+
+nav{
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+nav {
+  transition: opacity 0.5s ease;
+}
+
+.nav-container {
+  height: 15%;
+  background: rgb(101,154,187);
+  background: linear-gradient(90deg, rgba(101,154,187,1) 0%, rgba(135,206,250,1) 50%, rgba(101,154,187,1) 100%);    
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-left {
+  padding-top: auto;
+  padding-left: 20px;
+  width: 25%;
+  display: flex;
+}
+
+.nav-left a {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5rem;
+  margin-bottom: auto;
+  cursor: pointer;
+  padding: 0 .1em;
+
+  --c: #21628a; /* the color */
+  --b: .1em;    /* border length*/
+  --d: 20px;    /* the cube depth */
+  
+  --_s: calc(var(--d) + var(--b));
+  
+  color: var(--c);
+  border: solid #0000;
+  border-width: var(--b) var(--b) var(--_s) var(--_s);
+  background:
+    conic-gradient(at left var(--d)  bottom var(--d),
+      #0000 90deg, rgb(255 255 255 /0.3) 0 225deg,rgb(255 255 255 /0.6) 0) border-box,
+    conic-gradient(at left var(--_s) bottom var(--_s),
+      #0000 90deg,var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b))  border-box;
+  transform: translate(calc(var(--d)/-1),var(--d));
+  clip-path: 
+    polygon(
+     var(--d) 0%, 
+     var(--d) 0%, 
+     100% 0%, 
+     100% calc(100% - var(--d)),
+     100% calc(100% - var(--d)),
+     var(--d) calc(100% - var(--d))
+    );
+  transition: 0.5s;
+}
+
+.nav-left a:hover {
+  transform: translate(0,0);
+  clip-path: 
+    polygon(
+     0% var(--d), 
+     var(--d) 0%, 
+     100% 0%, 
+     100% calc(100% - var(--d)), 
+     calc(100% - var(--d)) 100%, 
+     0% 100%
+   );
+}
+
+.nav-center {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+
+.nav-right {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  
+}
+
+.nav-right h1{
+  text-align: left;
+  margin: auto;
+  margin-right: 5%;
+  color: #214b8a;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #FF69B4, #FFB6C1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main{
+  background-color: #11122F;
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.poza-text{
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+
+.photos-container{
+  position: relative;
+  width: 80%;
+  margin: auto;
+  object-fit: cover;
+  display: inline-flex;
+}
+
+.img-header{
+  width: 30%;
+  text-align: center;
+  margin: auto;
+  animation: up-down 2s infinite ease-in-out alternate;
+}
+
+
+
+@keyframes up-down{
+  from{
+    transform: translatey(0px);
+  }
+  to{
+    transform: translatey(-20px);
+  }
+}
+
+.typing-text {
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(45deg, #f3ec78, #af4261);
+  font-size: 5em;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  box-shadow: white;
+}
+
+/* BILA */
+
+/* Applying CSS to sphere */
+
+
+.tagcloud {
+  margin: auto;
+  margin-top: 15%;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 24px;
+}
+
+/* Change color of each text in sphere on hover   */
+.tagcloud--item:hover {
+  color: white;
+  font-size: 25px;
+  white-space: nowrap;
+}
+.tagcloud--item{
+  text-align: center;
+  font-size: 20px;
+  transition: font-size 0.2s ease-in-out;
+  white-space: nowrap;
+}
+/* Text BILA */
+.text-content1{
+  display: block; 
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+.text-content1 p {
+  font-weight: bold;
+  padding: 20px;
+  font-size: 40px;
+  color: #214b8a;
+  text-align: center;
+}
+
+p.title {
+  font-size: 80px;
+}
+
+p.check-the-steps-below-text {
+  font-style: italic;
+  font-size: 20px;
+}
+
+/* Results */
+.results{
+  width: 80%;
+  margin: auto;
+  padding: 50px;
+}
+
+.results h2{
+  font-size: 80px;
+  padding: 20px;
+  color: #214b8a;
+  text-align: center;
+}
+.results p{
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+  color: #214b8a;
+}
+
+/* Gallery */
+.gallery {
+  margin: auto;
+  width: 60%;
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+}
+
+.gallery-item {
+  position: relative;
+  display: inline-block;
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.gallery-image {
+  z-index: 1;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+/* .gallery-image:hover {
+	transform: scale(1.15);
+} */
+
+.gifs {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gallery-item:hover .gifs {
+  display: block;
+}
+
+
+
+/* Header text */
+
+#TextPoza1{
+  font-size: 80px;
+  font-weight: bold;
+  color: #214b8a;
+  letter-spacing: .15em;
+}
+
+.typewriter{
+  margin: auto;
+  width: 112ch;
+}
+
+.typewriter h1 {
+  font-size: 80px;
+  font-weight: bold;
+  color: #214b8a;
+  letter-spacing: .15em;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #214b8a; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation-duration: 5s;
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .8s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #214b8a }
+}
+
+/* Parallex scroll */
+
+.parallex__image, .parallex__image--1{
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.7;
+}
+
+.parallex__image--1 {
+  background-image: url("video-editing-photo.jpg");
+  min-height: 500px;
+}
+
+/* Footer */
+footer {
+  background-color: #214b8a;
+  color: black;
+  font-size: 14px;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  flex: 1;
+  letter-spacing: .2rem;
+}
+
+.footer-right {
+  flex: 1;
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+ul li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  color: #666666;
+}
+
+/* Form */
+.contact-container {
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form{
+  padding: 50px;
+  background-color: #214b8a;
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 4vw;
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px black;
+}
+
+form h3{
+  text-align: center;
+  color: #161616;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+form input, form textarea{
+  border: 0;
+  margin: 10px 0;
+  padding: 20px;
+  outline: none;
+  background: #cac1c1;
+  font-family: 16px;
+}
+
+form button{
+  padding: 15px;
+  background: #161616;
+  color: fff;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Contact us */
+#contact-us-title{
+  margin-top: 150px;
+  padding: 20px;
+  color: #214b8a;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 16px;
+}
+
+#contact-us {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  display: flex;
+  width: 100%;
+}
+
+.hub-map {
+  width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative; 
+  z-index: 1;
+}
+
+.contact-box {
+  position: absolute;
+  align-items: center;
+  width: 300px;
+  height: 50px;
+  background-color: black;
+  opacity: 0.5;
+  color: white;
+  padding: 10px;
+  z-index: 2;
+}
+
+.contact-box p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.calendly-inline-widget{
+  width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+/* Counter */
+span.num {
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+
+  white-space: nowrap;
+  display: block;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 20px;
+  text-align: center;
+  color: white;
+  text-shadow: 5px 5px 5px rgb(22 24 35 / 50%);
+
+  transition: .5s ease;
+  opacity: 0;
+}
+.gallery-item:hover .num {
+  opacity: 1;
+}
+
+/* Slide show */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  width: 80%;
+  height: 800px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* for landscape photos */
+  object-fit: contain; /* for portrait photos */
+}
+
+.slideshow-title {
+  margin-top: 150px;
+  padding: 20px;
+  color: #214b8a;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 16px;
+}
+
+.slideshow-subtitle {
+  font-style: italic;
+  text-align: center;
+  color: #214b8a;
+  text-align: center;
+  margin: auto;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+/* About Us */
+#about-us {
+  background-color:  rgb(10, 11, 29);
+  color: #214b8a;
+  padding: 80px 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+p {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 22px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
